@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sukkah Building in Monsey</title>
+  <title>Sukkah Building in Rockland County</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f8f8f8;
+      background: black;
+        color: white;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -38,11 +39,78 @@
     .contact-btn:hover {
       background-color: #005f47;
     }
+
+    h1 {
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    h2 {
+      margin: 10px 0;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    h3 {
+      margin: 10px 0;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 1s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    img {
+      max-width: 300px;
+      width: 80%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 18px;
+      color: white;
+      background-color: #007b5e;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+      margin: 5px;
+    }
+
+    .contact-btn:hover {
+      background-color: #005f47;
+    }
+
+    /* Mobile-specific styling */
+    @media (max-width: 600px) {
+      img {
+        max-width: 90%;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Sukkah Building in the Monsey Area</h1>
-  <h2>Build Your Sukkah In no Time</h2>
+  <h1>Sukkah Building in the Rockland County Area</h1>
+  <h2>Build Your Sukkah in no Time</h2>
   <h2>Call or Text for a Free Quote!</h2>
   <img src="image.jpg" alt="Sukkah Building Service">
   <br>
