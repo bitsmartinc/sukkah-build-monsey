@@ -22,20 +22,40 @@
     }
 
     /* placeholder until image loads */
-    .placeholder {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #222;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #aaa;
-      font-size: 1.5rem;
-      z-index: 0;
-    }
+.placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    #000 0%,
+    #000 12.5%,
+    #ff0000 12.5%,
+    #ff0000 25%,
+    #000 25%,
+    #000 37.5%,
+    #ff0000 37.5%,
+    #ff0000 50%,
+    #000 50%,
+    #000 62.5%,
+    #ff0000 62.5%,
+    #ff0000 75%,
+    #000 75%,
+    #000 87.5%,
+    #ff0000 87.5%,
+    #ff0000 100%
+  );
+  background-size: 40px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  z-index: 0;
+}
 
     /* background image */
     .bg {
