@@ -34,17 +34,17 @@ document.addEventListener("DOMContentLoaded", addSmsLink);
 let isPaused = false;
 let currentStep = 1;
 
-// Update step indicator text based on animation timing
-setTimeout(() => updateStepText("In no time..."), 1000);
-setTimeout(() => updateStepText("Just Give us a call"), 5000);
-setTimeout(() => updateStepText("Or Text Us"), 9000);
-setTimeout(() => updateStepText("Leave the work to us!"), 14000);
-setTimeout(() => updateStepText("A Sukkah for Everyone"), 19000);
-setTimeout(() => updateStepText("✨ Your Sukkah is Complete! Ready for Sukkot! ✨"), 24000);
+// Animation timings divided by 3 for 3x speed
+setTimeout(() => updateStepText("In no time..."), 333);
+setTimeout(() => updateStepText("Just Give us a call"), 1666);
+setTimeout(() => updateStepText("Or Text Us"), 3000);
+setTimeout(() => updateStepText("Leave the work to us!"), 4666);
+setTimeout(() => updateStepText("A Sukkah for Everyone"), 6333);
+setTimeout(() => updateStepText("✨ Your Sukkah is Complete! Ready for Sukkot! ✨"), 8000);
 setTimeout(() => {
     hideAnimationContainer();
     showImageContainer();
-}, 26000);
+}, 8666);
 
 function updateStepText(text) {
     const stepText = document.getElementById('stepText');
