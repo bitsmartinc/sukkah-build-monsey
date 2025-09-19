@@ -2,95 +2,107 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Sukkah Building in Rockland County</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: black;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            background-image: url('image.jpg');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
+  <meta charset="UTF-8">
+  <title>Sukkah Building in Rockland County</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      background-image: url('image.jpg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
 
-        }
+    /** for mobile devices */
+    @media screen and (max-width: 768px) {
+      body {
+        background-size: contain;
+      }
 
-        /** for mobile devices */
-        @media screen and (max-width: 768px) {
-            body {
-                background-size: contain;
-            }
+      .contact-btn {
+        font-size: 16px;
+        padding: 10px 18px;
+        width: 80%;
+        max-width: 250px;
+      }
+    }
 
-        }
+    /** for desktop */
+    @media screen and (min-width: 769px) {
+      body {
+        background-size: cover;
+      }
 
-        /** for desktop */
-        @media screen and (min-width: 769px) {
-            body {
-                background-size: cover;
-            }
-        }
+      .contact-btn {
+        font-size: 18px;
+        padding: 12px 24px;
+        width: auto;
+      }
+    }
 
-        h1 {
-            margin-bottom: 20px;
-        }
+    h1 {
+      margin-bottom: 20px;
+    }
 
-        .contact-btn {
-            display: inline-block;
-            padding: 12px 24px;
-            font-size: 18px;
-            color: white;
-            background-color: #007b5e;
-            border: none;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
+    .contact-btn {
+      display: inline-block;
+      color: white;
+      background-color: #007b5e;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.3s;
+      margin: 8px;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: flyIn 0.8s ease-out forwards;
+    }
 
-        .contact-btn:hover {
-            background-color: #005f47;
-        }
+    /* stagger the animations */
+    .contact-btn:nth-child(1) {
+      animation-delay: 0.2s;
+    }
 
+    .contact-btn:nth-child(2) {
+      animation-delay: 0.4s;
+    }
 
-        .contact-btn {
-            display: inline-block;
-            padding: 12px 24px;
-            font-size: 18px;
-            color: white;
-            background-color: #007b5e;
-            border: none;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: background 0.3s;
-            margin: 5px;
-        }
+    .contact-btn:hover {
+      background-color: #005f47;
+      transform: scale(1.05);
+    }
 
-        .contact-btn:hover {
-            background-color: #005f47;
-        }
-    </style>
+    @keyframes flyIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="contact-btns">
-
-        <!-- Call Option -->
-        <a class="contact-btn" href="tel:+17186834051">
-            Call Us
-        </a>
-        <!-- SMS option (works on mobile devices) -->
-        <a class="contact-btn"
-            href="sms:+17186834051?body=Please%20tell%20me%20more%20information%20about%20the%20Sukkah%20building.%20(Referral%20code%3A%20Website)">Text
-            Us</a>
-    </div>
-
+  <div class="contact-btns">
+    <!-- Call Option -->
+    <a class="contact-btn" href="tel:+17186834051">
+      Call Us
+    </a>
+    <!-- SMS option (works on mobile devices) -->
+    <a class="contact-btn"
+      href="sms:+17186834051?body=Please%20tell%20me%20more%20information%20about%20the%20Sukkah%20building.%20(Referral%20code%3A%20Website)">
+      Text Us
+    </a>
+  </div>
 </body>
 
 </html>
