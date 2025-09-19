@@ -6,19 +6,32 @@
   <title>Sukkah Building in Rockland County</title>
   <style>
     body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
       background-image: url('image.jpg');
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      background-attachment: scroll;
+      overflow: hidden;
     }
 
     /** for mobile devices */
     @media screen and (max-width: 768px) {
+      body {
+        background-size: contain;
+      }
 
       .contact-btn {
-        font-size: 25px;
-        padding: 10px 20px;
+        font-size: 16px;
+        padding: 10px 18px;
         width: 80%;
         max-width: 250px;
       }
@@ -52,7 +65,7 @@
       margin: 8px;
       opacity: 0;
       transform: translateY(50px);
-      animation: flyIn 1s ease-out forwards;
+      animation: flyIn 0.8s ease-out forwards;
     }
 
     /* stagger the animations */
